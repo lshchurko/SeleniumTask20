@@ -33,7 +33,8 @@ namespace Task70
         {
             mainPage = new MainPage(driver);
             Screenshot ss = ((ITakesScreenshot)driver).GetScreenshot();
-            ss.SaveAsFile(@"D:\test2.png", ScreenshotImageFormat.Png);
+            //ss.SaveAsFile(@"D:\test2.png", ScreenshotImageFormat.Png);
+            ss.SaveAsFile(@"./Screenshot/test2.png", ScreenshotImageFormat.Png);
             LoginPage loginPage = mainPage.OpenLoginPage();
             PasswordPage passwordPage = loginPage.OpenPasswordPage(mail);
             Thread.Sleep(2000); // explicit waiter
